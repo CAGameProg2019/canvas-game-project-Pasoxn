@@ -1,11 +1,32 @@
 <!doctype html>
 <html>
-    <head>
-        <title>Canvas Project</title>
-        <style>* { margin: 0; padding: 0 }</style>
-    </head>
-    <body>
-        <canvas id="main"></canvas>
-        <script src="main.js"></script>
-    </body>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Canvas Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+    </style>
+</head>
+
+<body>
+    <div id="startScreen">
+        <div>
+            <h1>improvised Bullet Hell</h1>
+        </div>
+        <div>
+            <p><br />press up arrow to start, the scroll</p>
+        </div>
+    </div>
+    <button onclick="timedText()">start time</button>
+    <p id="demo">Click on "start time". If you remain alive for 60 seconds, you win.</p>
+    <script src="time.js"></script>
+
+    <canvas id="main"></canvas>
+    <script src="main.js"></script>
+</body>
+
 </html>
