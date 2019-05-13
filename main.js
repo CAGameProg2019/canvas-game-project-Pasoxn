@@ -1,32 +1,39 @@
+
+let canvas = document.getElementById('main');
+let c = canvas.getContext('2d');
+//initial setup
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let core;
+setTimeout(c.fillText("wer", 10, 10), 3000);
+
+function timedText() {
+  // for (let i = 0; i < 60; i++) {
+  //   setTimeout(c.fillText(i, 10, 10), 1000);
+  // }
+  setTimeout(c.fillText("wer", 10, 10), 1000);
+  console.log('start')
+  setTimeout(myTimeout1, 60000);
+  setTimeout(myTimeout2, 3000);
+  setTimeout(myTimeout3, 40000);
+}
+function myTimeout1() {
+  alert("you won.")
+}
+
+function myTimeout2() {
+  core.radius = 6;
+  c.fillText("wer", 10, 10)
+
+}
+
+function myTimeout3() {
+  core.radius = 7;
+}
+
 addEventListener("keyup", ev => {
   if (ev.keyCode === 38) {
-
-    let canvas = document.getElementById('main');
-    let c = canvas.getContext('2d');
-    //initial setup
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    function timedText() {
-      setTimeout(myTimeout1, 60000) 
-      setTimeout(myTimeout2, 20000) 
-      setTimeout(myTimeout3, 40000) 
-    }
-    function myTimeout1() {
-      alert("you won.")
-    }
-  
-    function myTimeout2() {
-        core.radius = 5;
-    }
-    
-  
-    function myTimeout3() {
-      core.radius = 7;
-  }
-  
-
- 
 
     //variables
     let mouse = {
@@ -119,9 +126,9 @@ addEventListener("keyup", ev => {
 
 
     //implementation 
-    let core;
+    // let core;
     function init() {
-      circle2 = new Circle(canvas.width / 2, canvas.height / 2, 20, 'black');
+      circle2 = new Circle(canvas.width / 2, canvas.height / 2, 15, 'black');
       core = new Circle(canvas.width / 2, canvas.height / 2, 4, 'red')
     }
 
